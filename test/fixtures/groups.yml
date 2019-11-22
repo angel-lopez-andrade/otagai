@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  workout_focus: MyString
+  active: false
+  duration: 2019-11-22 18:25:45
+
+two:
+  name: MyString
+  workout_focus: MyString
+  active: false
+  duration: 2019-11-22 18:25:45

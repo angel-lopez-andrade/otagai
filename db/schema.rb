@@ -10,10 +10,63 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_052751) do
+ActiveRecord::Schema.define(version: 2019_11_22_075332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "discussions", force: :cascade do |t|
+    t.bigint "group_id"
+    t.bigint "user_id"
+    t.datetime "date"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_discussions_on_group_id"
+    t.index ["user_id"], name: "index_discussions_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.bigint "group_id"
+    t.bigint "user_id"
+    t.datetime "date"
+    t.text "description"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_events_on_group_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "workout_focus"
+    t.boolean "active"
+    t.datetime "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.bigint "discussion_id"
+    t.datetime "date"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["discussion_id"], name: "index_posts_on_discussion_id"
+  end
+
+  create_table "progressions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "group_id"
+    t.boolean "participation"
+    t.datetime "time"
+    t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_progressions_on_group_id"
+    t.index ["user_id"], name: "index_progressions_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +76,22 @@ ActiveRecord::Schema.define(version: 2019_11_22_052751) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.integer "gender"
+    t.integer "age"
+    t.bigint "group_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["group_id"], name: "index_users_on_group_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "discussions", "groups"
+  add_foreign_key "discussions", "users"
+  add_foreign_key "events", "groups"
+  add_foreign_key "events", "users"
+  add_foreign_key "posts", "discussions"
+  add_foreign_key "progressions", "groups"
+  add_foreign_key "progressions", "users"
+  add_foreign_key "users", "groups"
 end

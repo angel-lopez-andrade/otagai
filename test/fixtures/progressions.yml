@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  group: one
+  participation: false
+  time: 2019-11-22 18:28:11
+  date: 2019-11-22 18:28:11
+
+two:
+  user: two
+  group: two
+  participation: false
+  time: 2019-11-22 18:28:11
+  date: 2019-11-22 18:28:11
