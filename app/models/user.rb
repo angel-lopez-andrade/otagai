@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   enum gender: {male: 1, female: 2}
-  belongs_to :group
+  belongs_to :group, optional: true
   has_many :progressions
   has_many :discussions
   has_many :events

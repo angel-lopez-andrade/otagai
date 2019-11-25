@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_075332) do
+ActiveRecord::Schema.define(version: 2019_11_25_113531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,9 +81,11 @@ ActiveRecord::Schema.define(version: 2019_11_22_075332) do
     t.integer "gender"
     t.integer "age"
     t.bigint "group_id"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["group_id"], name: "index_users_on_group_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "discussions", "groups"
