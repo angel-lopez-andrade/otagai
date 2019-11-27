@@ -14,11 +14,17 @@
  *= require_self
  */
 
+
+/*
+Main Blue: #415FFF
+Main Orange: #FF8F3D
+*/
+
 body {
     margin: 0;
     font-size: 24px;
     box-sizing: border-box;
-    background: blue;
+    background: #415FFF;
 }
 
 ul {
