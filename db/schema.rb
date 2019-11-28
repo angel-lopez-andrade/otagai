@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_25_130020) do
+ActiveRecord::Schema.define(version: 2019_11_28_040113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,9 +63,11 @@ ActiveRecord::Schema.define(version: 2019_11_25_130020) do
     t.string "name"
     t.string "workout_focus"
     t.boolean "active"
-    t.datetime "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.interval "duration"
+    t.datetime "start_date"
+    t.datetime "end_date"
   end
 
   create_table "posts", force: :cascade do |t|
