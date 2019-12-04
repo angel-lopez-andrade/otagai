@@ -1,14 +1,24 @@
-<%= render "/shared/navbar" %>
-<%= current_user.username %>
-<%= image_tag User.last.picture if User.last.picture.attached? %>
-<%= image_tag Group.last.picture if Group.last.picture.attached? %>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
-<p>testline</p>
+<%= render "shared/navbar" %>
+<section id="homepage">
+    <div id="article-carousel">
+        <div class="carousel-item">A</div>
+        <div class="carousel-item">B</div>
+        <div class="carousel-item">C</div>
+        <div class="carousel-item">D</div>
+        <div class="carousel-item">E</div>
+    </div>
+
+    <div id="info-button">
+        <p>?</p>
+    </div>
+
+    <div id="groups-nearby">
+        <!-- some embedded ruby for each group... -->
+    </div>
+
+    <div id="group-search">
+        <form>
+            <!-- rails form containing search criteria and search submit button -->
+        </form>
+    </div>
+</section>

@@ -6,9 +6,9 @@
         width: 100%;
         display: flex;
         justify-content: space-around;
-        height: 12vh;
+        height: 11vh;
         li {
-            border: 1px solid black;
+            color: white;
             font-weight: bold;
             width: 25%;
             display: flex;
@@ -16,15 +16,12 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            p {
-                border: 1px solid green;
-            }
         }
     }
 
     @media(min-width: 580px) {
         ul {
-            height: 10vh;
+            height: 9vh;
             li {
                 font-size: 22px;
             }
