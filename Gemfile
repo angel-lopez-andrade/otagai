@@ -69,8 +69,8 @@ gem "down", "~> 5.0"
 
 gem "normalize-rails", "~> 4.1"
 
-gem "jquery-slick-rails", "~> 1.9"
+gem 'rails-ujs', '~> 0.1.0'
 
 gem "jquery-rails", "~> 4.3"
 
-gem 'rails-ujs', '~> 0.1.0'
+gem "jquery-slick-rails", "~> 1.9"
