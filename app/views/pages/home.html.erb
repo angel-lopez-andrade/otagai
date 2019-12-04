@@ -1,11 +1,16 @@
 <%= render "shared/navbar" %>
+<% content_for :homepage_carousel_head do %>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+<% end %>
+
 <section id="homepage">
-    <div id="article-carousel">
-        <div class="carousel-item">A</div>
-        <div class="carousel-item">B</div>
-        <div class="carousel-item">C</div>
-        <div class="carousel-item">D</div>
-        <div class="carousel-item">E</div>
+    <div class="article-carousel">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
     </div>
 
     <div id="info-button">
@@ -21,4 +26,20 @@
             <!-- rails form containing search criteria and search submit button -->
         </form>
     </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.article-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+    </script>
 </section>
