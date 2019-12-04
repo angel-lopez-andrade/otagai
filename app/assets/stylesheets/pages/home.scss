@@ -1,3 +1,14 @@
 #homepage {
-
+    #article-carousel {
+        .carousel-item {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            max-width: 60;
+            height: 50px;
+            margin: 0 auto;
+            background: pink;
+            text-align: center;
+        }
+    }
 }

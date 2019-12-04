@@ -5,12 +5,12 @@
 <% end %>
 
 <section id="homepage">
-    <div class="article-carousel">
-        <div>A</div>
-        <div>B</div>
-        <div>C</div>
-        <div>D</div>
-        <div>E</div>
+    <div id="article-carousel">
+        <div class="carousel-item">A</div>
+        <div class="carousel-item">B</div>
+        <div class="carousel-item">C</div>
+        <div class="carousel-item">D</div>
+        <div class="carousel-item">E</div>
     </div>
 
     <div id="info-button">
@@ -32,7 +32,7 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('.article-carousel').slick({
+            $('#article-carousel').slick({
                 dots: true,
                 infinite: true,
                 speed: 500,
