@@ -1,23 +1,32 @@
 #navbar {
     ul {
+        background-color: #FF8F3D;
         position: fixed;
         bottom: 0;
-        margin-bottom: 0;
-        background-color: #FF8F3D;
+        width: 100%;
         display: flex;
         justify-content: space-around;
-        width: 100%;
-        padding: 0;
-        height: 12%;
+        height: 12vh;
         li {
-            text-align: center;
             border: 1px solid black;
+            font-weight: bold;
             width: 25%;
             display: flex;
+            flex-basis: auto;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
             p {
-                font-size: 0.7em;
+                border: 1px solid green;
+            }
+        }
+    }
+
+    @media(min-width: 580px) {
+        ul {
+            height: 10vh;
+            li {
+                font-size: 22px;
             }
         }
     }

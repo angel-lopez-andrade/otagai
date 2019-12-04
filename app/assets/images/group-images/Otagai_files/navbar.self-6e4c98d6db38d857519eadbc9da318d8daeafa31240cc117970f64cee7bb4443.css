@@ -1,0 +1,31 @@
+/* line 1, /mnt/c/Users/Angel/Desktop/otagai/otagai/app/assets/stylesheets/shared/navbar.scss */
+#navbar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100vw;
+  min-width: 100vw;
+  padding: 0;
+}
+/* line 9, /mnt/c/Users/Angel/Desktop/otagai/otagai/app/assets/stylesheets/shared/navbar.scss */
+#navbar ul {
+  background-color: #FF8F3D;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 12%;
+}
+/* line 15, /mnt/c/Users/Angel/Desktop/otagai/otagai/app/assets/stylesheets/shared/navbar.scss */
+#navbar ul li {
+  text-align: center;
+  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 22, /mnt/c/Users/Angel/Desktop/otagai/otagai/app/assets/stylesheets/shared/navbar.scss */
+#navbar ul li p {
+  font-size: 0.7em;
+}

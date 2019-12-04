@@ -66,3 +66,5 @@ gem "devise", "~> 4.7"
 gem "faker", "~> 2.7"
 
 gem "down", "~> 5.0"
+
+gem "normalize-rails", "~> 4.1"
