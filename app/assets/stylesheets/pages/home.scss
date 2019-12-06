@@ -10,21 +10,34 @@
         margin: 10px 10px 0 10px;
 
         .slick-slide {
+            outline: none;
             text-align: center;
             position: relative;
             margin-left: 7px;
             margin-right: 7px;
-            height: 136px;
+            height: 155px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            span {
+                background: rgba(white, 0.5);
+                font-weight: bold;
+                min-width: fit-content;
+                max-width: 90px;
+                /* inherit max-width from another child - img, possible? */
+            }
             img {
                 height: 70px;
                 width: 90px;
             }
-            &.slick-current img {
-                height: 120px;
-                width: 150px;
+            &.slick-current {
+                span {
+                    max-width: 150px;
+                }
+                img {
+                    height: 120px;
+                    width: 150px;
+                }
             }
         }
 
