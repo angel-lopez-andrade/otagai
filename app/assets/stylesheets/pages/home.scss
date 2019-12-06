@@ -1,14 +1,40 @@
 #homepage {
     #article-carousel {
         .carousel-item {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            max-width: 60;
-            height: 50px;
-            margin: 0 auto;
-            background: pink;
             text-align: center;
+            border: 1px solid green;
+            position: relative;
+            margin-left: 5px;
+            margin-right: 5px;
+            .slick-current {
+                height: 200px;
+            }
+        }
+
+        #slick-slide00 {
+            background-color: black;
+        }
+
+        #slick-slide01 {
+
+        }
+
+        #slick-slide02 {
+
+        }
+
+        #slick-slide03 {
+
+        }
+        
+        #slick-slide04 {
+
         }
     }
+    /*
+        whole slick area = .slick-track
+        each slick slide = #slick-side00 etc.
+        current = #slick-slidexx.carousel-item.slick-slide.slick-current.slick-active.slick-center
+        non-current = #slick-slidexx.carousel-item.slick-slide
+    */
 }
