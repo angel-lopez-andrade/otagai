@@ -1,40 +1,46 @@
 #homepage {
     #article-carousel {
-        .carousel-item {
+        /*
+            whole carousel: #article-carousel
+            all slides: .slick-slide
+            individual slide: .slick-sideXX
+            current slide: #slick-slidexx.slick-current
+            arrows: .slick-prev, .slick-next
+        */
+        margin: 10px 10px 0 10px;
+
+        .slick-slide {
             text-align: center;
-            border: 1px solid green;
             position: relative;
-            margin-left: 5px;
-            margin-right: 5px;
-            .slick-current {
-                height: 200px;
+            margin-left: 7px;
+            margin-right: 7px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                height: 70px;
+                width: 90px;
+            }
+            &.slick-current img {
+                height: 110px;
+                width: 140px;
             }
         }
 
-        #slick-slide00 {
-            background-color: black;
+        .slick-prev, .slick-next {
+            z-index: 99;
+            &:before {
+                color: #FF8F3D;
+            }
         }
 
-        #slick-slide01 {
-
+        .slick-prev {
+            margin-left: 40px;
         }
 
-        #slick-slide02 {
-
-        }
-
-        #slick-slide03 {
-
-        }
-        
-        #slick-slide04 {
-
+        .slick-next {
+            margin-right: 40px;
         }
     }
-    /*
-        whole slick area = .slick-track
-        each slick slide = #slick-side00 etc.
-        current = #slick-slidexx.carousel-item.slick-slide.slick-current.slick-active.slick-center
-        non-current = #slick-slidexx.carousel-item.slick-slide
-    */
 }

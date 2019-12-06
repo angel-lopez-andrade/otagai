@@ -6,11 +6,11 @@
 
 <section id="homepage">
     <div id="article-carousel">
-        <div class="carousel-item"><%= image_tag "article-tests/article1", size: "160x120" %></div>
-        <div class="carousel-item"><%= image_tag "article-tests/article2", size: "160x120" %></div>
-        <div class="carousel-item"><%= image_tag "article-tests/article3", size: "160x120" %></div>
-        <div class="carousel-item"><%= image_tag "article-tests/article4", size: "160x120" %></div>
-        <div class="carousel-item"><%= image_tag "article-tests/article5", size: "160x120" %></div>
+        <div><%= image_tag "article-tests/article1" %></div>
+        <div><%= image_tag "article-tests/article2" %></div>
+        <div><%= image_tag "article-tests/article3" %></div>
+        <div><%= image_tag "article-tests/article4" %></div>
+        <div><%= image_tag "article-tests/article5" %></div>
     </div>
 
     <div id="info-button">
@@ -33,8 +33,10 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('#article-carousel').slick({
-                dots: true,
+                // dots: true,
+                arrows: true,
                 infinite: true,
+                // infinite: false,
                 speed: 300,
                 slidesToShow: 1,
                 centerMode: true,
