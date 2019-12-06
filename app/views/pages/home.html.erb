@@ -18,7 +18,22 @@
     </div>
 
     <div id="groups-nearby">
-        <!-- some embedded ruby for each group... -->
+        <p id="title">Groups Near You</p>
+        <!-- add 'nearby' logic later -->
+        <% for group in Group.all.sample(2) %>
+            <div class="group">
+                <p id="group-info"><span><%= group.name %> - <%= group.workout_focus %></span><span><%= group.duration %><span id="join-link">Join</span></span></p>
+                <p id="group-users">
+                    <% for user in group.users %>
+                        <% if user.picture.attached? %>
+                            <%= image_tag user.picture %>
+                        <% else %>
+                            <%= user.username %>
+                        <% end %>
+                    <% end %>
+                </p>
+            </div>
+        <% end %>
     </div>
 
     <div id="group-search">
@@ -30,7 +45,6 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function(){
             $('#article-carousel').slick({
