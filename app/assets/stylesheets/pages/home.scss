@@ -1,3 +1,46 @@
 #homepage {
-    
+    #article-carousel {
+        /*
+            whole carousel: #article-carousel
+            all slides: .slick-slide
+            individual slide: .slick-sideXX
+            current slide: #slick-slidexx.slick-current
+            arrows: .slick-prev, .slick-next
+        */
+        margin: 10px 10px 0 10px;
+
+        .slick-slide {
+            text-align: center;
+            position: relative;
+            margin-left: 7px;
+            margin-right: 7px;
+            height: 136px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                height: 70px;
+                width: 90px;
+            }
+            &.slick-current img {
+                height: 120px;
+                width: 150px;
+            }
+        }
+
+        .slick-prev, .slick-next {
+            z-index: 99;
+            &:before {
+                color: #FF8F3D;
+            }
+        }
+
+        .slick-prev {
+            margin-left: 40px;
+        }
+
+        .slick-next {
+            margin-right: 40px;
+        }
+    }
 }

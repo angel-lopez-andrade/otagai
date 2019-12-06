@@ -1,11 +1,16 @@
 <%= render "shared/navbar" %>
+<% content_for :homepage_carousel_head do %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+<% end %>
+
 <section id="homepage">
     <div id="article-carousel">
-        <div class="carousel-item">A</div>
-        <div class="carousel-item">B</div>
-        <div class="carousel-item">C</div>
-        <div class="carousel-item">D</div>
-        <div class="carousel-item">E</div>
+        <div><%= image_tag "article-tests/article1" %><span>Article 1</span></div>
+        <div><%= image_tag "article-tests/article2" %><span>Article 2</span></div>
+        <div><%= image_tag "article-tests/article3" %><span>Article 3</span></div>
+        <div><%= image_tag "article-tests/article4" %><span>Article 4</span></div>
+        <div><%= image_tag "article-tests/article5" %><span>Article 5</span></div>
     </div>
 
     <div id="info-button">
@@ -21,4 +26,24 @@
             <!-- rails form containing search criteria and search submit button -->
         </form>
     </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#article-carousel').slick({
+                // dots: true,
+                arrows: true,
+                infinite: true,
+                // infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                centerMode: true,
+                variableWidth: true,
+                adaptiveHeight: true
+            });
+        });
+    </script>
 </section>
