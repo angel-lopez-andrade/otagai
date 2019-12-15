@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   #User Profile (ensure new users can't have existing usernames)
   get "/users/:name/show", to: "users#show", as: "user"
 
+  #Groups Index/Search
+  get "/groups", to: "groups#index", as: "groups"
+
   #Current Group
   get "/groups/:id/show", to: "groups#show", as: "group"
 

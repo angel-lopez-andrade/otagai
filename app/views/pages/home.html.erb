@@ -18,7 +18,7 @@
     </div>
 
     <div id="groups-nearby">
-        <p id="title">Groups Near You</p>
+        <p id="groups-nearby-title">Groups Near You</p>
         <!-- 'nearby' logic to be added -->
         <% for group in Group.all.sample(3) %>
             <div class="group">
@@ -38,9 +38,10 @@
     </div>
 
     <div id="group-search">
-        <form>
-            <!-- rails form containing search criteria and search submit button -->
-        </form>
+        <p id="find-a-group">Find a group</p>
+        <%= form_with model: Group, local: true do |form| %>
+            <!-- three select boxes with sprint duration, workout focus and gender options + add gender to group -->
+        <% end %>
     </div>
     
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

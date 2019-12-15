@@ -76,10 +76,10 @@
 
     #groups-nearby {
         position: relative;
-        bottom: 15px;
+        bottom: 25px;
         width: 88%;
         margin: 0 auto;
-        #title {
+        #groups-nearby-title {
             text-align: center;
             font-weight: bold;
             font-size: 22px;
@@ -119,5 +119,16 @@
                 }
             }
         }
+    }
+    
+    #group-search {
+        #find-a-group {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        width: 88%;
+        margin: 0 auto;
+        background: yellow;
     }
 }
