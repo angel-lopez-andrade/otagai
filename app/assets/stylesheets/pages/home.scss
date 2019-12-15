@@ -100,7 +100,6 @@
                 }
             }
             #group-users {
-                background-color: yellow;
                 margin-top: 5px;
                 width: 100%;
                 $user-pic-box: 11vw;
@@ -113,7 +112,10 @@
                     min-width: $user-pic-box;
                     max-width: $user-pic-box;
                     //no horizontal content overflow until < ~330 px
-                    border: 1px solid purple;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
             }
         }

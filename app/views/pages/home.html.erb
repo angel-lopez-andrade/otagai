@@ -19,17 +19,17 @@
 
     <div id="groups-nearby">
         <p id="title">Groups Near You</p>
-        <!-- add 'nearby' logic later -->
+        <!-- 'nearby' logic to be added -->
         <% for group in Group.all.sample(3) %>
             <div class="group">
-                <p id="group-info"><span><%= group.name %> - <%= group.workout_focus %></span><span><%= group.duration %><span id="join-link">Join</span></span></p>
+                <p id="group-info"><span><%= group.name %> - <%= group.workout_focus %> - <%= group.users.count %>/6</span><span><%= group.duration %><span id="join-link">Join</span></span></p>
                 <p id="group-users">
                     <% current_users = group.users.all %>
-                    <% for i in 1..6 %>
-                        <% if current_users[i - 1] %>
-                            <span>User Pic<%= i %></span>
+                    <% for i in 0..5 %>
+                        <% if current_users[i] %>
+                            <span><%= image_tag current_users[i].picture %></span>
                         <% else %>
-                            <span>Box <%= i %></span>
+                            <span class="no-user-box"><%= image_tag "no-user-box" %></span>
                         <% end %>
                     <% end %>
                 </p>

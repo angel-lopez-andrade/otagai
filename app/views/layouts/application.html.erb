@@ -8,7 +8,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <% if content_for? :homepage_carousel_head %>
-      <% p "**********************content_for? worked" %>
       <%= yield :homepage_carousel_head %>
     <% end %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
