@@ -24,12 +24,14 @@
             <div class="group">
                 <p id="group-info"><span><%= group.name %> - <%= group.workout_focus %></span><span><%= group.duration %><span id="join-link">Join</span></span></p>
                 <p id="group-users">
-                    <span>Box 1</span>
-                    <span>Box 2</span>
-                    <span>Box 3</span>
-                    <span>Box 4</span>
-                    <span>Box 5</span>
-                    <span>Box 6</span>
+                    <% current_users = group.users.all %>
+                    <% for i in 1..6 %>
+                        <% if current_users[i - 1] %>
+                            <span>User Pic<%= i %></span>
+                        <% else %>
+                            <span>Box <%= i %></span>
+                        <% end %>
+                    <% end %>
                 </p>
             </div>
         <% end %>
