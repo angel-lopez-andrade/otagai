@@ -100,14 +100,19 @@
                 }
             }
             #group-users {
+                margin-top: 5px;
                 width: 100%;
-                height: 50px;
-                background-color: green;
+                $user-pic-box: 11vw;
+                height: $user-pic-box;
                 display: flex;
                 justify-content: space-around;
-                img {
+                span {
+                    box-sizing: border-box;
                     height: 100%;
-                    flex-basis: fit-content;
+                    min-width: $user-pic-box;
+                    max-width: $user-pic-box;
+                    //no horizontal content overflow until < ~330 px
+                    border: 1px solid purple;
                 }
             }
         }
