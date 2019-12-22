@@ -90,6 +90,7 @@
             font-weight: bold;
             margin-bottom: 12px;
             #group-info {
+                font-size: 0.8rem;
                 span:nth-of-type(2) {
                     float: right;
                     #join-link {
@@ -127,6 +128,8 @@
             font-weight: bold;
             font-size: 1.1rem;
         }
+        position: relative;
+        bottom: 16px;
         width: 88%;
         margin: 0 auto;
         background: yellow;

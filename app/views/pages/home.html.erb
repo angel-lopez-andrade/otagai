@@ -22,7 +22,7 @@
         <!-- 'nearby' logic to be added -->
         <% for group in Group.all.sample(3) %>
             <div class="group">
-                <p id="group-info"><span><%= group.name %> - <%= group.workout_focus %> - <%= group.users.count %>/6</span><span><%= group.duration %><span id="join-link">Join</span></span></p>
+                <p id="group-info"><span><%= group.name %> - <%= group.workout_focus %> - <%= group.gender.capitalize %> - <%= group.users.count %>/6</span><span><%= group.duration %><span id="join-link">Join</span></span></p>
                 <p id="group-users">
                     <% current_users = group.users.all %>
                     <% for i in 0..5 %>
@@ -40,7 +40,21 @@
     <div id="group-search">
         <p id="find-a-group">Find a group</p>
         <%= form_with model: Group, local: true do |form| %>
-            <!-- three select boxes with sprint duration, workout focus and gender options + add gender to group -->
+            <div>
+                <%= form.label :duration, "Sprint Duration: " %>
+                <%= form.select :duration, Group.all.collect{ |group| group.duration }.uniq, include_blank: true %>
+            </div>
+            <div>
+                <%= form.label :workout_focus, "Workout Focus: " %>
+                <%= form.select :workout_focus, Group.all.collect{ |group| group.workout_focus }.uniq, include_blank: true %>
+            </div>
+            <div>
+                <%= form.label :gender, "Gender: " %>
+                <%= form.select :gender, Group.all.collect{ |group| group.gender}.uniq, include_blank: true %>
+            </div>
+            <div>
+                <%= form.submit value: "Search" %>
+            </div>
         <% end %>
     </div>
     
