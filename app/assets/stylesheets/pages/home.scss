@@ -90,9 +90,9 @@
             font-weight: bold;
             margin-bottom: 12px;
             #group-info {
-                font-size: 0.8rem;
                 span:nth-of-type(2) {
                     float: right;
+                    margin-bottom: 2px;
                     #join-link {
                         margin-left: 5px;
                         background-color: white;
@@ -133,5 +133,17 @@
         width: 88%;
         margin: 0 auto;
         background: yellow;
+        text-align: center;
+        #search-conditions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .condition {
+                
+            }
+        }
+        #search {
+            
+        }
     }
 }
