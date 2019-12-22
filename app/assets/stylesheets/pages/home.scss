@@ -124,7 +124,7 @@
     
     #group-search {
         #find-a-group {
-            text-align: center;
+            padding-top: 5px;
             font-weight: bold;
             font-size: 1.1rem;
         }
@@ -132,18 +132,19 @@
         bottom: 16px;
         width: 88%;
         margin: 0 auto;
-        background: yellow;
         text-align: center;
         #search-conditions {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             .condition {
-                
+                margin: 5px auto;
+                flex-grow: 1;
             }
         }
         #search {
-            
+            margin: 5px auto;
+            padding-bottom: 10px;
         }
     }
 }
