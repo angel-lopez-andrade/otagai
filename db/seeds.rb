@@ -15,7 +15,8 @@ if Group.count == 0
             active: true,
             duration: ["8 weeks", "6 weeks"].sample,
             start_date: start_date,
-            end_date: start_date+(7*8)
+            end_date: start_date+(7*8),
+            gender: rand(1..3)
         )
         case group.workout_focus
         when "Aerobic"
@@ -32,15 +33,23 @@ end
 
 if User.count == 0
     for i in 1..20
-        user = User.create(
+        user = User.new(
             email: "#{Faker::Ancient.titan}@test.com",
             password: Faker::Lorem.characters(number: 6),
             description: Faker::Lorem.sentence,
             gender: rand(1..2),
             age: rand(18..75),
             username: Faker::Name.name,
-            group_id: Group.find(rand(1..Group.count)).id
         )
+        for group in Group.all
+            if group.gender == user.gender or group.gender == "both"
+                if group.users.count < 6
+                    user.group_id = group.id
+                    break
+                end
+            end
+        end
+        user.save
         picture = Down.download("https://loremflickr.com/320/240/headshot")
         user.picture.attach(io: picture, filename: File.basename(picture.path))
         p "#{user.username} - #{user.email}"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_28_040113) do
+ActiveRecord::Schema.define(version: 2019_12_22_050147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2019_11_28_040113) do
     t.interval "duration"
     t.datetime "start_date"
     t.datetime "end_date"
+    t.integer "gender"
   end
 
   create_table "posts", force: :cascade do |t|
