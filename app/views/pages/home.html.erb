@@ -40,7 +40,7 @@
     <div id="group-search">
         <p id="find-a-group">Find a group</p>
         <!-- Only selectable options are those that an existing group already has - 22/12 -->
-        <%= form_with model: @group, local: true do |form| %>
+        <%= form_with model: @group, method: "get", local: true do |form| %>
             <div id="search-conditions">
                 <div class="condition">
                     <%= form.select :duration, Group.all.collect{ |group| group.duration }.uniq.prepend(["Sprint Duration", nil]), {disabled: "", selected: ""} %>

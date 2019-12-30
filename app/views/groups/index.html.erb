@@ -24,16 +24,16 @@
     <div id="group-search">
         <p id="find-a-group">Find a group</p>
         <!-- Only selectable options are those that an existing group already has - 22/12 -->
-        <%= form_with model: @group, local: true do |form| %>
+        <%= form_with model: @group, method: "get", local: true do |form| %>
             <div id="search-conditions">
                 <div class="condition">
-                    <%= form.select :duration, Group.all.collect{ |group| group.duration }.uniq.prepend(["Sprint Duration", nil]), {disabled: "", selected: ""} %>
+                    <%= select :form, :duration, Group.all.collect{ |group| group.duration }.uniq.prepend(["Sprint Duration", nil]), {disabled: "", selected: ""} %>
                 </div>
                 <div class="condition">
-                    <%= form.select :workout_focus, Group.all.collect{ |group| group.workout_focus }.uniq.prepend(["Workout Focus", nil]), {disabled: "", selected: ""} %>
+                    <%= select :form, :workout_focus, Group.all.collect{ |group| group.workout_focus }.uniq.prepend(["Workout Focus", nil]), {disabled: "", selected: ""} %>
                 </div>
                 <div class="condition">
-                    <%= form.select :gender, Group.all.collect{ |group| group.gender.capitalize}.uniq.prepend(["Gender", nil]), {disabled: "", selected: ""} %>
+                    <%= select :form, :gender, Group.all.collect{ |group| group.gender.capitalize}.uniq.prepend(["Gender", nil]), {disabled: "", selected: ""} %>
                 </div>
             </div>
             <div id="search">
@@ -41,4 +41,6 @@
             </div>
         <% end %>
     </div>
+
+    <%= params %>
 </section>
