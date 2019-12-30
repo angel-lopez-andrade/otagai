@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   #Groups Index/Search
   get "/groups", to: "groups#index", as: "groups"
+  post "/groups", to: "groups#search"
 
   #Current Group
   get "/groups/:id/show", to: "groups#show", as: "group"
