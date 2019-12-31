@@ -1,0 +1,77 @@
+#groups-index {
+    #title {
+        text-align: center;
+        color: #FF8F3D;
+        margin: 24px auto 46px auto;
+        font-size: 1.6rem;
+    }
+
+    #groups {
+        overflow-y: scroll;
+        height: 55vh;
+        position: relative;
+        bottom: 25px;
+        width: 88%;
+        margin: 0 auto 8px auto;
+        .group {
+            font-weight: bold;
+            margin-bottom: 12px;
+            #group-info {
+                span:nth-of-type(2) {
+                    float: right;
+                    margin-bottom: 2px;
+                    #join-link {
+                        margin-left: 5px;
+                        background-color: white;
+                        padding: 1px 3px;
+                    }
+                }
+            }
+            #group-users {
+                margin-top: 5px;
+                width: 100%;
+                $user-pic-box: 11vw;
+                height: $user-pic-box;
+                display: flex;
+                justify-content: space-around;
+                span {
+                    box-sizing: border-box;
+                    height: 100%;
+                    min-width: $user-pic-box;
+                    max-width: $user-pic-box;
+                    //no horizontal content overflow until < ~330 px
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #group-search {
+        #find-a-group {
+            padding-top: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        position: relative;
+        bottom: 16px;
+        width: 88%;
+        margin: 0 auto;
+        text-align: center;
+        #search-conditions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .condition {
+                margin: 5px auto;
+                flex-grow: 1;
+            }
+        }
+        #search {
+            margin: 5px auto;
+            padding-bottom: 10px;
+        }
+    }
+}
