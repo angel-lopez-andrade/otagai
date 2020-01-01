@@ -3,6 +3,7 @@ class GroupsController < ApplicationController
 
     def index
         #better way to combine activerecord relations? - 31/12
+        #need to use merge instead of or? can't test intersection with current data set - 31/12
         if !params[:form]
             @groups = Group.all
         else
