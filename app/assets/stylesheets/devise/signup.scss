@@ -1,12 +1,19 @@
-#user-login {
-    text-align: center;
+#user-signup {
+    background-color: white;
     #banner {
+        position: relative;
+        background-color: #415FFF;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
         h1, p {
             color: #FF8F3D;
         }
         h1 {
+            margin-bottom: 12px;
             font-size: 2.4rem;
-            margin: 45px auto 15px auto;
+            margin-top: 0;
+            position: relative;
         }
         p {
             font-weight: normal;
@@ -17,36 +24,31 @@
         }
     }
     
-    #login-form {
-        height: 62vh;
-        margin: 30px auto auto auto;
-        width: 76%;
-        background-color: white;
+    #signup-form {
+        padding: 30px 22px;
         h2 {
             font-weight: normal;
             color: #415FFF;
             position: relative;
-            right: 58px;
             font-size: 2.4rem;
-            padding-top: 30px;
             padding-bottom: 30px;
         }
         .field {
-            padding-top: 3px;
-            padding-bottom: 3px;
+            margin-bottom: 8px;
+            label {
+                color: #415FFF;
+                font-size: 1.3rem;
+            }
         }
-        #remember-me {
-            padding-top: 8px;
-            position: relative;
-            right: 35px;
-        }
-        .login-actions {
-            margin-top: 20px;
+        //
+        .actions {
+            text-align: center;
+            margin-top: 25px;
             input, a {
                 all: unset;
             }
-            .action {
-                font-size: 1.1rem;
+            input {
+                font-size: 1.3rem;
                 font-weight: bold;
                 padding: 8px 5px;
                 width: 72%;
