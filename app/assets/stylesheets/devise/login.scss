@@ -1,6 +1,59 @@
 #user-login {
     text-align: center;
+    #banner {
+        h1, p {
+            color: #FF8F3D;
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin: 45px auto 15px auto;
+        }
+        p {
+            font-weight: normal;
+            padding-left: 17px;
+            padding-right: 17px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
     #login-form {
+        height: 62vh;
+        margin: 30px auto auto auto;
+        width: 76%;
         background-color: white;
+        h2 {
+            font-weight: normal;
+            color: #415FFF;
+            position: relative;
+            right: 58px;
+            font-size: 2.4rem;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .field {
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        #remember-me {
+            padding-top: 8px;
+            position: relative;
+            right: 35px;
+        }
+        .login-actions {
+            margin-top: 20px;
+            input, a {
+                all: unset;
+            }
+            .action {
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding: 8px 5px;
+                width: 72%;
+                margin:  10px auto;
+                background-color: #415FFF;
+                color: #FF8F3D;
+                cursor: pointer;
+            }
+        }
     }
 }
