@@ -15,6 +15,20 @@
 
     <div id="info-button">
         <p>?</p>
+        <!-- button always displayed that opens the modal -->
+        <button data-micromodal-trigger="modal-1">Open Modal</button>
+
+        <!-- toggles modal display and holds the modals unique id -->
+        <div class="modal-toggle" id="modal-1">
+            <!-- the overlay behind the modal - when clicked, the modal is closed -->
+            <div class="modal-overlay" data-micromodal-close>
+                <!-- the actual modal contents, inside of an optional, styled container element -->
+                <div class="modal-container">
+                    <h1>Modal Content</h1>
+                    <button data-micromodal-close>Close Modal</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="groups-nearby">
