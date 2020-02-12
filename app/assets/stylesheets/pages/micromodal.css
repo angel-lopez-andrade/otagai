@@ -8,9 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-container {
+}
+
+.modal-container {
     background-color: #fff;
     padding: 30px;
     max-width: 500px;
@@ -18,4 +18,12 @@
     border-radius: 4px;
     overflow-y: auto;
     box-sizing: border-box;
-  }
+}
+
+.modal-toggle {
+    display: none;
+}
+
+.modal-toggle.is-open {
+    display: block;
+}

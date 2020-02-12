@@ -14,9 +14,9 @@
     </div>
 
     <div id="info-button">
-        <p>?</p>
         <!-- button always displayed that opens the modal -->
-        <button data-micromodal-trigger="modal-1">Open Modal</button>
+        <!-- data-micromodal-trigger attribute not working as intended, so custom JS DOM script below used to open modal -->
+        <button data-micromodal-trigger="modal-1" id="modal-button">?</button>
 
         <!-- toggles modal display and holds the modals unique id -->
         <div class="modal-toggle" id="modal-1">
@@ -89,5 +89,10 @@
                 focusOnSelect: true
             });
         });
+    </script>
+    <script type="text/javascript">
+        document.querySelector("button[id='modal-button']").addEventListener("click", (event) => {
+            MicroModal.show("modal-1");
+        })
     </script>
 </section>
