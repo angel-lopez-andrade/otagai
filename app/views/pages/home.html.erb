@@ -14,13 +14,14 @@
     </div>
 
     <div id="info-button">
-        <!-- button always displayed that opens the modal -->
-        <!-- data-micromodal-trigger attribute not working as intended, so custom JS DOM script below used to open modal -->
-        <button data-micromodal-trigger="modal-1" id="modal-button">?</button>
-
-        <!-- toggles modal display and holds the modals unique id -->
-        <div class="modal-toggle" id="modal-1">
-            <!-- the overlay behind the modal - when clicked, the modal is closed -->
+        <div data-micromodal-trigger="info-modal" id="modal-button">
+            <!-- button always displayed that opens the modal -->
+            <!-- data-micromodal-trigger attribute not working as intended (but still needed for some reason), so custom JS DOM script below used to open modal -->
+            <p>?</p>
+        </div>
+        <!-- modal display toggling controller, also holding the modals id used for opening -->
+        <div class="modal-toggle" id="info-modal">
+            <!-- the page overlay behind the modal - when clicked, the modal is closed with data-micromodal-close -->
             <div class="modal-overlay" data-micromodal-close>
                 <!-- the actual modal contents, inside of an optional, styled container element -->
                 <div class="modal-container">
@@ -91,8 +92,8 @@
         });
     </script>
     <script type="text/javascript">
-        document.querySelector("button[id='modal-button']").addEventListener("click", (event) => {
-            MicroModal.show("modal-1");
+        document.querySelector("div[id='modal-button']").addEventListener("click", (event) => {
+            MicroModal.show("info-modal");
         })
     </script>
 </section>
