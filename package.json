@@ -1,4 +1,5 @@
 {
+  "license": "UNLICENSED",
   "dependencies": {
     "@rails/webpacker": "4.2.2",
     "micromodal": "^0.4.2"
