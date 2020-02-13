@@ -22,11 +22,23 @@
         <!-- modal display toggling controller, also holding the modals id used for opening -->
         <div class="modal-toggle" id="info-modal">
             <!-- the page overlay behind the modal - when clicked, the modal is closed with data-micromodal-close -->
+            <!-- visual elements not used here - modal covers entire screen -->
             <div class="modal-overlay" data-micromodal-close>
                 <!-- the actual modal contents, inside of an optional, styled container element -->
                 <div class="modal-container">
-                    <h1>Modal Content</h1>
-                    <button data-micromodal-close>Close Modal</button>
+                    <h1>What is Otagai?</h1>
+                    <div id="info-box-container">
+                        <div class="info-box">
+                            <h1>test1</h1>
+                        </div>
+                        <div class="info-box">
+                            <h1>test2</h1>
+                        </div>
+                        <div class="info-box">
+                            <h1>test3</h1>
+                        </div>
+                    </div>                    
+                    <button data-micromodal-close>Close</button>
                 </div>
             </div>
         </div>
@@ -80,7 +92,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('#article-carousel').slick({
-                arrows: true,
+                arrows: false,
                 infinite: true,
                 speed: 300,
                 slidesToShow: 1,

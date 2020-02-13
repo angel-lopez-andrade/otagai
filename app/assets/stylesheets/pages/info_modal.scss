@@ -1,0 +1,40 @@
+#homepage {
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-container {
+        background-color: #415FFF;
+        padding-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 100%;
+        width: 100%;
+        h1 {
+            font-size: 2.3rem;
+        }
+        #info-box-container {
+            margin-bottom: 20px;
+            border: 1px solid black;
+            .info-box {
+                border: 1px solid purple;
+            }
+        }
+    }
+
+
+    //modal opening and closing logic
+    .modal-toggle {
+        display: none;
+        &.is-open {
+            display: block;
+        }
+    }
+}
