@@ -12,7 +12,7 @@
 
     .modal-container {
         background-color: #415FFF;
-        padding-top: 60px;
+        padding-top: 55px;
         padding-left: 30px;
         padding-right: 30px;
         height: 100%;
@@ -21,10 +21,21 @@
             font-size: 2.3rem;
         }
         #info-box-container {
-            margin-bottom: 20px;
-            border: 1px solid black;
+            margin-top: 45px;
+            margin-bottom: 25px;
             .info-box {
-                border: 1px solid purple;
+                margin: 20px auto;
+                display: flex;
+                justify-content: space-around;
+                div {
+                    border: 1px solid yellow;
+                    width: 50%;
+                    height: 150px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
             }
         }
     }

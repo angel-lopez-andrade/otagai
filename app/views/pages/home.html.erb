@@ -24,18 +24,33 @@
             <!-- the page overlay behind the modal - when clicked, the modal is closed with data-micromodal-close -->
             <!-- visual elements not used here - modal covers entire screen -->
             <div class="modal-overlay" data-micromodal-close>
-                <!-- the actual modal contents, inside of an optional, styled container element -->
+                <!-- the actual modal contents, inside of an custom, styled container element -->
                 <div class="modal-container">
                     <h1>What is Otagai?</h1>
                     <div id="info-box-container">
                         <div class="info-box">
-                            <h1>test1</h1>
+                            <div class="info-image">
+                                <%= image_tag "info-images/sneakers-weights-gym.jpg" %>
+                            </div>
+                            <div class="info-text">
+                                <p>text</p>
+                            </div>
                         </div>
                         <div class="info-box">
-                            <h1>test2</h1>
+                            <div class="info-text">
+                                <p>text</p>
+                            </div>
+                            <div class="info-image">
+                                <%= image_tag "info-images/arm-wrestling-competition" %>
+                            </div>
                         </div>
                         <div class="info-box">
-                            <h1>test3</h1>
+                            <div class="info-image">
+                                <%= image_tag "info-images/high-five-camaraderie" %>
+                            </div>
+                            <div class="info-text">
+                                <p>text</p>
+                            </div>
                         </div>
                     </div>                    
                     <button data-micromodal-close>Close</button>
