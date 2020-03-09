@@ -17,7 +17,12 @@
         padding-right: 30px;
         height: 100%;
         width: 100%;
+        overflow-y: scroll;
+        position: relative;
+        bottom: 100px;
+        padding-bottom: 30px;
         h1 {
+            padding-top: 110px;
             font-size: 2.3rem;
         }
         #info-box-container {
@@ -30,7 +35,7 @@
                 div {
                     border: 1px solid yellow;
                     width: 50%;
-                    height: 150px;
+                    height: 160px;
                     img {
                         height: 100%;
                         width: 100%;
@@ -39,7 +44,6 @@
             }
         }
     }
-
 
     //modal opening and closing logic
     .modal-toggle {
