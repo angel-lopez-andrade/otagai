@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/pages/home", to: "pages#home", as: "home"
   
   #User Profile (ensure new users can't have existing usernames)
-  get "/users/:name/show", to: "users#show", as: "user"
+  get "/users/:id/show", to: "users#show", as: "user"
 
   #Groups Index/Search
   get "/groups", to: "groups#index", as: "groups"

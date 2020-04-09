@@ -69,7 +69,7 @@
                     <% current_users = group.users.all %>
                     <% for i in 0..5 %>
                         <% if current_users[i] %>
-                            <span><%= image_tag current_users[i].picture %></span>
+                            <span><%= link_to(image_tag(current_users[i].picture), user_path(current_users[i].id)) %></span>
                         <% else %>
                             <span class="no-user-box"><%= image_tag "no-user-box" %></span>
                         <% end %>
