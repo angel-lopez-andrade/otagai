@@ -1,0 +1,55 @@
+#homepage {
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-container {
+        background-color: #415FFF;
+        padding-top: 55px;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        position: relative;
+        bottom: 100px;
+        padding-bottom: 30px;
+        h1 {
+            padding-top: 110px;
+            font-size: 2.3rem;
+        }
+        #info-box-container {
+            margin-top: 45px;
+            margin-bottom: 25px;
+            .info-box {
+                margin: 20px auto;
+                display: flex;
+                justify-content: space-around;
+                div {
+                    border: 1px solid yellow;
+                    width: 50%;
+                    height: 160px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //modal opening and closing logic
+    .modal-toggle {
+        display: none;
+        &.is-open {
+            display: block;
+        }
+    }
+}

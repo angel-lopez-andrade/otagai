@@ -74,3 +74,9 @@ gem 'rails-ujs', '~> 0.1.0'
 gem "jquery-rails", "~> 4.3"
 
 gem "jquery-slick-rails", "~> 1.9"
+
+gem "webpacker"
+
+gem "guard-livereload"
+
+gem "rack-livereload"

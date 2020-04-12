@@ -1,0 +1,44 @@
+#user-show {
+    .profile-pic {
+        img {
+            margin: auto;
+            object-fit: contain;
+            width: 100%;
+            max-height: 35vh;
+        }
+        max-width: 80vw;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .large-header {
+        width: 80vw;
+        text-align: center;
+        margin: 10px auto;
+        font-size: 24px;
+    }
+
+    .sub-info-container {
+        margin: 10px auto;
+        width: 80vw;
+        display: flex;
+        justify-content: space-between;
+        .sub-info-box {
+            font-size: 18px;
+            flex: 1;
+            &:nth-child(1) {
+                text-align: left;
+            }
+            &:nth-last-child(1) {
+                text-align: right;
+            }
+        }
+    }
+
+    .description-box {
+        width: 80vw;
+        display: block;
+        margin: 0 auto;
+        min-height: 16vh;
+    }
+}

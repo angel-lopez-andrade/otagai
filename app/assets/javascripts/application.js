@@ -16,4 +16,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.slick
+//= require micromodal/dist/micromodal
 //= require_tree .

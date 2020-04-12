@@ -14,7 +14,49 @@
     </div>
 
     <div id="info-button">
-        <p>?</p>
+        <div data-micromodal-trigger="info-modal" id="modal-button">
+            <!-- button always displayed that opens the modal -->
+            <!-- data-micromodal-trigger attribute not working as intended (but still needed for some reason), so custom JS DOM script below used to open modal -->
+            <p>?</p>
+        </div>
+        <!-- modal display toggling controller, also holding the modals id used for opening -->
+        <div class="modal-toggle" id="info-modal">
+            <!-- the page overlay behind the modal - when clicked, the modal is closed with data-micromodal-close -->
+            <!-- visual elements not used here - modal covers entire screen -->
+            <div class="modal-overlay" data-micromodal-close>
+                <!-- the actual modal contents, inside of an custom, styled container element -->
+                <div class="modal-container">
+                    <h1>What is Otagai?</h1>
+                    <div id="info-box-container">
+                        <div class="info-box">
+                            <div class="info-image">
+                                <%= image_tag "info-images/sneakers-weights-gym.jpg" %>
+                            </div>
+                            <div class="info-text">
+                                <p>text</p>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-text">
+                                <p>text</p>
+                            </div>
+                            <div class="info-image">
+                                <%= image_tag "info-images/arm-wrestling-competition" %>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="info-image">
+                                <%= image_tag "info-images/high-five-camaraderie" %>
+                            </div>
+                            <div class="info-text">
+                                <p>text</p>
+                            </div>
+                        </div>
+                    </div>                    
+                    <button data-micromodal-close>Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="groups-nearby">
@@ -27,7 +69,7 @@
                     <% current_users = group.users.all %>
                     <% for i in 0..5 %>
                         <% if current_users[i] %>
-                            <span><%= image_tag current_users[i].picture %></span>
+                            <span><%= link_to(image_tag(current_users[i].picture), user_path(current_users[i].id)) %></span>
                         <% else %>
                             <span class="no-user-box"><%= image_tag "no-user-box" %></span>
                         <% end %>
@@ -65,7 +107,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $('#article-carousel').slick({
-                arrows: true,
+                arrows: false,
                 infinite: true,
                 speed: 300,
                 slidesToShow: 1,
@@ -75,5 +117,10 @@
                 focusOnSelect: true
             });
         });
+    </script>
+    <script type="text/javascript">
+        document.querySelector("div[id='modal-button']").addEventListener("click", (event) => {
+            MicroModal.show("info-modal");
+        })
     </script>
 </section>
