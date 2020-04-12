@@ -1,13 +1,13 @@
 <%= render "shared/navbar" %>
 
 <section id="user-show">
-    <div id="profile-pic"><%= image_tag @user.picture if @user.picture%></div>
-    <h1 id="username"><%= @user.username %></h1>
-    <div id="sub-info-container">
-        <h2 class="sub-info-box"><%= Group.find(@user.group.id).name if @user.group %></h2>
-        <h2 class="sub-info-box"><%= @user.age %></h2>
+    <div class="profile-pic"><%= image_tag @user.picture if @user.picture%></div>
+    <h1 class="large-header"><%= @user.username %></h1>
+    <div class="sub-info-container">
+        <h2 class="sub-info-box">Current Group: <%= Group.find(@user.group.id).name if @user.group %></h2>
+        <h2 class="sub-info-box">Age: <%= @user.age %></h2>
     </div>
-    <textarea><%= @user.description %></textarea>
+    <textarea class="description-box"><%= @user.description %></textarea>
 
     <!-- Think about how to implement 'Past Groups Section' - 12/4 -->
 </section>

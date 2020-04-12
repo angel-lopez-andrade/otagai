@@ -1,5 +1,5 @@
 #user-show {
-    #profile-pic {
+    .profile-pic {
         img {
             margin: auto;
             object-fit: contain;
@@ -11,14 +11,34 @@
         margin-top: 20px;
     }
 
-    #username {
+    .large-header {
+        width: 80vw;
         text-align: center;
+        margin: 10px auto;
+        font-size: 24px;
     }
 
-    #sub-info-container {
+    .sub-info-container {
+        margin: 10px auto;
+        width: 80vw;
         display: flex;
+        justify-content: space-between;
         .sub-info-box {
-            border: 1px solid green;
+            font-size: 18px;
+            flex: 1;
+            &:nth-child(1) {
+                text-align: left;
+            }
+            &:nth-last-child(1) {
+                text-align: right;
+            }
         }
+    }
+
+    .description-box {
+        width: 80vw;
+        display: block;
+        margin: 0 auto;
+        min-height: 16vh;
     }
 }
