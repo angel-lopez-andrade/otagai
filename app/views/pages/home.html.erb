@@ -64,7 +64,7 @@
         <!-- 'nearby' logic to be added -->
         <% for group in Group.all.sample(3) %>
             <div class="group">
-                <p id="group-info"><span><%= link_to(group.name, group_path(group.id)) %> - <%= group.workout_focus %> - <%= group.gender.capitalize %> - <%= group.users.count %>/6</span><span><%= group.duration %><span id="join-link">Join</span></span></p>
+                <p class="group-info"><span><%= link_to(group.name, group_path(group.id)) %> - <%= group.workout_focus %> - <%= group.gender.capitalize %> - <%= group.users.count %>/6</span><span><%= group.duration %><span class="join-link">Join</span></span></p>
                 <p class="group-users">
                     <% current_users = group.users.all %>
                     <% for i in 0..5 %>

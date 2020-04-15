@@ -33,9 +33,13 @@ body {
     font-size: 16px;
     box-sizing: border-box;
     background-color: #415FFF;
-    margin-bottom: 11vh;
+    margin-bottom: 11vh; /* Same as navbar partial's height */
 }
 
 ul {
    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }

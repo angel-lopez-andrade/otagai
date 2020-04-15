@@ -7,34 +7,41 @@
         .main-header {
             text-align: center;
             font-weight: bold;
-            font-size: 22px;
+            font-size: 1.8rem;
             color: #FF8F3D;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
         .sub-header-right {
             text-align: right;
+            font-size: 1rem;
+            margin-bottom: 5px;
         }
         .sub-header-center {
             color: #FF8F3D;
+            margin: 20px auto 8px 12px;
+            font-size: 1rem;
         }
         .group-image {
             img {
-                max-width: 100%;
+                display: block;
+                width: 80%;
+                margin: 0 auto;
             }
         }
         .group-users {
             margin-top: 5px;
             width: 100%;
-            $user-pic-box: 11vw;
+            $user-pic-box: 22vw;
             height: $user-pic-box;
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
             span {
                 box-sizing: border-box;
                 height: 100%;
                 min-width: $user-pic-box;
                 max-width: $user-pic-box;
-                //no horizontal content overflow until < ~330 px
+                margin: auto 5px 10px 5px;
                 img {
                     height: 100%;
                     width: 100%;
