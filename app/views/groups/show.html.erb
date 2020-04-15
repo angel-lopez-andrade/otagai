@@ -1,0 +1,19 @@
+<%= render "shared/navbar" %>
+<section id="show-group">
+    <div class="group">
+        <h1 class="main-header"><%= @group.name %></h1>
+        <h2 class="sub-header-right"><%= @group.workout_focus %></h2>
+        <div class="group-image"><%= image_tag @group.picture%></div>
+        <h2 class="sub-header-center">Members</h2>
+        <div class="group-users">
+            <% current_users = @group.users.all %>
+            <% for i in 0..5 %>
+                <% if current_users[i] %>
+                    <span><%= link_to(image_tag(current_users[i].picture), user_path(current_users[i].id)) %></span>
+                <% else %>
+                    <span class="no-user-box"><%= image_tag "no-user-box" %></span>
+                <% end %>
+            <% end %>
+        </p>
+    </div>
+</section>

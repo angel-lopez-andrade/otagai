@@ -1,0 +1,45 @@
+#show-group {
+    .group {
+        margin: 0 auto;
+        font-weight: bold;
+        margin-bottom: 12px;
+        width: 88%;
+        .main-header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            color: #FF8F3D;
+            margin-bottom: 8px;
+        }
+        .sub-header-right {
+            text-align: right;
+        }
+        .sub-header-center {
+            color: #FF8F3D;
+        }
+        .group-image {
+            img {
+                max-width: 100%;
+            }
+        }
+        .group-users {
+            margin-top: 5px;
+            width: 100%;
+            $user-pic-box: 11vw;
+            height: $user-pic-box;
+            display: flex;
+            justify-content: space-around;
+            span {
+                box-sizing: border-box;
+                height: 100%;
+                min-width: $user-pic-box;
+                max-width: $user-pic-box;
+                //no horizontal content overflow until < ~330 px
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

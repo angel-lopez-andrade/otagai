@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-    before_action :permit_search_params
+    before_action :permit_search_params, only: [:index]
 
     def index
         if !params[:form]
@@ -20,6 +20,10 @@ class GroupsController < ApplicationController
             all_matches = all_matches.merge gender_matches if gender_matches
             @groups = all_matches
         end
+    end
+
+    def show
+        @group = Group.find(params[:id])
     end
 
     private

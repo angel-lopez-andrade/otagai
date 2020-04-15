@@ -96,18 +96,18 @@
         .group {
             font-weight: bold;
             margin-bottom: 12px;
-            #group-info {
+            .group-info {
                 span:nth-of-type(2) {
                     float: right;
                     margin-bottom: 2px;
-                    #join-link {
+                    .join-link {
                         margin-left: 5px;
                         background-color: white;
                         padding: 1px 3px;
                     }
                 }
             }
-            #group-users {
+            .group-users {
                 margin-top: 5px;
                 width: 100%;
                 $user-pic-box: 11vw;
