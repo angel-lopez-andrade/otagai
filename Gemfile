@@ -80,3 +80,5 @@ gem "webpacker"
 gem "guard-livereload"
 
 gem "rack-livereload"
+
+gem "simple_calendar", "~> 2.0"

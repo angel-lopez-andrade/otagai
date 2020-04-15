@@ -48,5 +48,19 @@
                 }
             }
         }
+        .calendar {
+            margin-top: 15px;
+            .calendar-heading {
+                display: flex;
+                justify-content: space-between;
+                .calendar-title {
+                    min-width: fit-content;
+                }
+            }
+            td {
+                width: 55px;
+                height: 55px;
+            }
+        }
     }
 }

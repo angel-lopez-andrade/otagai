@@ -13,6 +13,7 @@
  *= require normalize-rails
  *= require slick
  *= require slick-theme
+ *= require simple_calendar
  *= require_tree .
  *= require_self
  */

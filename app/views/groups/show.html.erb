@@ -15,5 +15,11 @@
                 <% end %>
             <% end %>
         </p>
+
+        <div class="calendar">
+            <%= month_calendar do |date| %>
+                <%= date.day %>
+            <% end %>
+        </div>
     </div>
 </section>
