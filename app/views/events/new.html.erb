@@ -1,22 +1,25 @@
 <section id="new-event">
-    <h1><%= @group.name %></h1>
-    <h2>New Event</h2>
-    <div>
+    <h1 class="main-header"><%= @group.name %></h1>
+    <h2 class="sub-header">New Event</h2>
+    <div class="form">
         <%= form_with model: @group, local: true do |form| %>
-        <div>
+        <div class="form-field">
             <%= form.label :event_name, "Event Name:" %>
             <%= form.text_field :event_name %>
         </div>
-        <div>
+        <div class="form-field">
             <%= form.label :date_time, "Date & Time:" %>
             <%= form.text_field :date_time %>
         </div>
-        <div>
+        <div class="form-field textarea-field">
             <%= form.label :description, "Description:" %>
             <%= form.text_area(:text, size: "26x9") %>
         </div>
-        <!-- add image functionality here -->
-        <div>
+        <div class="form-field">
+            <%= form.label :picture, "Attach a Picture: " %>
+            <%= form.file_field :picture, accept: "image/jpg,image/jpeg,image/png"%>
+        </div>
+        <div class="form-field submit-button">
             <%= form.submit value: "Post Event" %>
         </div>
         <% end %>

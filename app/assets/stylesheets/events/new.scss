@@ -1,3 +1,39 @@
 #new-event {
-    
+    width: 82vw;
+    margin: 0 auto;
+    .main-header {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.8rem;
+        color: #FF8F3D;
+        margin-bottom: 5px;
+    }
+    .sub-header {
+        color: #FF8F3D;
+        font-size: 1.2rem;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .form-field {
+        font-weight: bold;
+        font-size: 1rem;
+        label {
+            display: inline-block;
+        }
+        input, textarea {
+            margin-bottom: 18px;
+        }
+    }
+    .textarea-field {
+        display: flex;
+        flex-direction: column;
+    }
+    .submit-button {
+        margin-top: 12px;
+        text-align: center;
+        input {
+            padding: 5px;
+        }
+    }
 }
