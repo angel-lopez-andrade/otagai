@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     end
 
     private
-    # Permission security only really necessary for receiving forms with user-inputted data like 'create' (thus, 'show' omitted from checking)
     def setup_whitelisted_params
         whitelisted_params = params.require(:user).permit(:email, :encrypted_password, :description, :gender, :age, :group_id, :username)
     end

@@ -2,7 +2,7 @@
     <h1 class="main-header"><%= @group.name %></h1>
     <h2 class="sub-header">New Event</h2>
     <div class="form">
-        <%= form_with url: create_event_path, local: true do |form| %>
+        <%= form_with scope: :post, url: create_event_path, local: true do |form| %>
         <div class="form-field">
             <%= form.label :event_name, "Event Name:" %>
             <%= form.text_field :event_name %>
