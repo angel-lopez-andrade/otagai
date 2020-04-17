@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     before_action :setup_whitelisted_params, only: [:create, :edit, :update]
 
     def show
-        @user = User.find(params[:id])
+        @user = User.find(params[:user_id])
     end
 
     def new

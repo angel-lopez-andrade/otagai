@@ -2,18 +2,18 @@
     <h1 class="main-header"><%= @group.name %></h1>
     <h2 class="sub-header">New Event</h2>
     <div class="form">
-        <%= form_with model: @group, local: true do |form| %>
+        <%= form_with url: create_event_path, local: true do |form| %>
         <div class="form-field">
             <%= form.label :event_name, "Event Name:" %>
             <%= form.text_field :event_name %>
         </div>
         <div class="form-field">
             <%= form.label :date_time, "Date & Time:" %>
-            <%= form.text_field :date_time %>
+            <%= form.datetime_select :date_time %>
         </div>
         <div class="form-field textarea-field">
             <%= form.label :description, "Description:" %>
-            <%= form.text_area(:text, size: "26x9") %>
+            <%= form.text_area :description, size: "26x9" %>
         </div>
         <div class="form-field">
             <%= form.label :picture, "Attach a Picture: " %>
