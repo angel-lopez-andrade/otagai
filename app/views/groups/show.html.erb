@@ -15,9 +15,11 @@
                 <% end %>
             <% end %>
         </p>
-        <p><%= link_to("CREATE NEW EVENT PAGE", new_event_path(@group.id))%></p>
-        <p>Params: <%= params %></p>
-        <p>@group_events: <%= @group_events %></p>
+        <p><%= link_to("Create an Event", new_event_path(@group.id))%></p>
+        <p>Tentative list of Event id's;</p>
+        <% for event in @group_events %>
+            <p><%= event.id %></p>
+        <% end %>
         <div class="calendar">
             <%= month_calendar do |date| %>
                 <%= date.day %>

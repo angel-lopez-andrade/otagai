@@ -16,6 +16,7 @@ class EventsController < ApplicationController
         if params[:picture]
             event.picture.attach(params[:picture])
         end
+        redirect_to group_path(params[:group_id])
     end
 
     private
