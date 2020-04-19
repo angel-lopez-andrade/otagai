@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get "/groups/:group_id/threads/:thread_id/posts/new", to: "posts#new", as: "new_post"
   post "/groups/:group_id/threads/:thread_id/posts", to: "posts#create"
 
-  # YX New Event
+  # YY New Event
   get "groups/:group_id/events/new", to: "events#new", as: "new_event"
   post "groups/:group_id/events", to: "events#create", as: "create_event"
 

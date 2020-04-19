@@ -49,6 +49,8 @@
             }
         }
         .calendar {
+            border: 1.5px ridge grey;
+            background-color: white;
             margin-top: 15px;
             .calendar-heading {
                 display: flex;
@@ -57,7 +59,11 @@
                     min-width: fit-content;
                 }
             }
+            th, tr, thead {
+                border: 1px solid black;
+            }
             td {
+                border: 1px solid black;
                 width: 55px;
                 height: 55px;
             }
