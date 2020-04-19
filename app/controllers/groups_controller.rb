@@ -25,6 +25,17 @@ class GroupsController < ApplicationController
     def show
         @group = Group.find(params[:group_id])
         @group_events = Event.where(group_id: params[:group_id])
+        @event_icon_dates = []
+        group_events_looper = @group_events.clone
+        group_events_looper.each_with_index do |event, i|
+            @event_icon_dates.push({
+                date: group_events_looper[i].date
+                #.strftime("%e")
+            })
+        end
+        @event_icon_dates = @event_icon_dates.uniq { |event_icon_date| event_icon_date[:date]}
+        p "!!!#{@event_icon_dates}"
+        p "???#{@group_events}"
     end
 
     private

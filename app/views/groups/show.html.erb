@@ -22,12 +22,13 @@
         <div class="calendar">
             <%= month_calendar(attribute: :date, events: @group_events) do |date, events| %>
                 <%= date.day %>
-
                 <% events.each do |event| %>
-                    <div>
-                        <%= event.id %>
-                    </div>
+                    <div>Event</div>
                 <% end %>
+                <!--
+                <% event_icons = events[1] %>
+                <%= event_icons %>
+                -->
             <% end %>
         </div>
     </div>
