@@ -31,4 +31,13 @@
             <% end %>
         </div>
     </div>
+
+    <script type="text/javascript">
+        // Add pointer cursor class to dates with events
+        let dates = document.querySelectorAll("td");
+        let eventDates = [...dates].filter(el => el.querySelector(".event-marker") !== null);
+        for (let i = 0; i < eventDates.length; i++) {
+            eventDates[i].classList.add("pointer-cursor");                
+        }
+    </script>
 </section>
