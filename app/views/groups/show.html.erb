@@ -16,19 +16,18 @@
             <% end %>
         </p>
         <p><%= link_to("Create an Event", new_event_path(@group.id))%></p>
-        <% for event in @group_events %>
-            <p><%= event.id %></p>
-        <% end %>
         <div class="calendar">
             <%= month_calendar(attribute: :date, events: @group_events) do |date, events| %>
                 <%= date.day %>
-                <% events.each do |event| %>
-                    <div>Event</div>
-                <% end %>
                 <!--
-                <% event_icons = events[1] %>
-                <%= event_icons %>
+                <% events.each do |event| %>
+                    <div><%= event.id %></div>
+                <% end %>
                 -->
+
+                <% unless events.empty? %>
+                    <div class="event-marker"></div>
+                <% end %>
             <% end %>
         </div>
     </div>

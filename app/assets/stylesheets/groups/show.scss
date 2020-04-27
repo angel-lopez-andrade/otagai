@@ -67,6 +67,15 @@
                 width: 55px;
                 height: 55px;
             }
+            .event-marker {
+                height: 25%;
+                width: 30%;
+                border: 1px solid grey;
+                background-color: rgb(27, 255, 27);
+                position: relative;
+                left: 70%;
+                bottom: 30%;
+            }
         }
     }
 }
