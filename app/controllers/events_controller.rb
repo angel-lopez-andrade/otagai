@@ -20,7 +20,8 @@ class EventsController < ApplicationController
     end
 
     def show
-        
+        p params[:date]
+        @events = Event.where("date ~* ?", '^' + params[:date] + '.*$')
     end
 
     private
