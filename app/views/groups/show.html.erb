@@ -19,25 +19,12 @@
         <div class="calendar">
             <%= month_calendar(attribute: :date, events: @group_events) do |date, events| %>
                 <%= date.day %>
-                <!--
-                <% events.each do |event| %>
-                    <div><%= event.id %></div>
-                <% end %>
-                -->
-
                 <% unless events.empty? %>
-                    <div class="event-marker"></div>
+                    <%= link_to event_path(@group.id, date) do %>
+                        <div>link</div>
+                    <% end %>
                 <% end %>
             <% end %>
         </div>
     </div>
-
-    <script type="text/javascript">
-        // Add pointer cursor class to dates with events
-        let dates = document.querySelectorAll("td");
-        let eventDates = [...dates].filter(el => el.querySelector(".event-marker") !== null);
-        for (let i = 0; i < eventDates.length; i++) {
-            eventDates[i].classList.add("pointer-cursor");                
-        }
-    </script>
 </section>

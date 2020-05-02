@@ -19,6 +19,10 @@ class EventsController < ApplicationController
         redirect_to group_path(params[:group_id])
     end
 
+    def show
+        
+    end
+
     private
     def parse_datetime_params
         @datetime = Time.new(params[:post]["date_time(1i)"].to_i, params[:post]["date_time(2i)"].to_i, params[:post]["date_time(3i)"].to_i, params[:post]["date_time(4i)"].to_i, params[:post]["date_time(5i)"].to_i)

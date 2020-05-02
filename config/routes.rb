@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   post "groups/:group_id/events", to: "events#create", as: "create_event"
 
   # X Individual Event
-  get "groups/:group_id/events/:event_id/show", to: "events#show", as: "event"
+  get "groups/:group_id/events/:date/show", to: "events#show", as: "event"
 
   # X Group Sprint Progression
   get "groups/:group_id/progressions/index", to: "progressions#index", as: "progressions"
