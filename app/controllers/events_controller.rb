@@ -19,14 +19,8 @@ class EventsController < ApplicationController
         redirect_to group_path(params[:group_id])
     end
 
-    def show
-        p "#{params[:date]} = params[:date]"
-        p "#{Date.strptime(params[:date])} = Modified params[:date] (convert to DateTime)"
-        p "#{Event.last.date} = Event.last.date"
-        event_timeless_date = Event.last.date.to_s.match(/\d{4}-\d{2}-\d{2}/)
-        p "#{event_timeless_date} = event_timeless_date"
-        
-        @events = Event.where("date like ?", params[:date])
+    def show        
+        @events = Event.where("date(date) = ?", params[:date])
     end
 
     private
