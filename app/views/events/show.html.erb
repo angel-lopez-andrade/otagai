@@ -1,6 +1,6 @@
 <h1>events view</h1>
 <%= params %>
 <% for event in @events %>
-    <% local_event_date = "#{event.date.in_time_zone(event.timezone).strftime("%a, %d %b %Y, %H:%M:%S")} (#{event.timezone.split("/")[-1]} Time)" %>
+    <% local_event_date = "#{event.date.in_time_zone(event.timezone).strftime("%a, %d %b %Y, %H:%M:%S")} (#{event.timezone.to_s.split("/")[-1]} Time)" %>
     <div><%= event.name %> - <%= local_event_date %></div>
 <% end %>
