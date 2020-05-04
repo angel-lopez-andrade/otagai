@@ -19,16 +19,17 @@ class EventsController < ApplicationController
         redirect_to group_path(params[:group_id])
     end
 
-    def show        
+    def show
         @events = Event.where("date(date) = ?", params[:date])
     end
 
     private
     def parse_datetime_params
-        @datetime = Time.new(params[:post]["date_time(1i)"].to_i, params[:post]["date_time(2i)"].to_i, params[:post]["date_time(3i)"].to_i, params[:post]["date_time(4i)"].to_i, params[:post]["date_time(5i)"].to_i)
+        user_timezone = ActiveSupport::TimeZone[params[:post][:user_time_zone]]
+        @datetime = Time.new(params[:post]["date_time(1i)"].to_i, params[:post]["date_time(2i)"].to_i, params[:post]["date_time(3i)"].to_i, params[:post]["date_time(4i)"].to_i, params[:post]["date_time(5i)"].to_i, 0, user_timezone)
     end
 
     def whitelisted_params
-        @whitelisted_params = params.require(:post).permit(:event_name, "date_time(1i)", "date_time(2i)", "date_time(3i)", "date_time(4i)", "date_time(5i)", :description, :picture)
+        @whitelisted_params = params.require(:post).permit(:event_name, "date_time(1i)", "date_time(2i)", "date_time(3i)", "date_time(4i)", "date_time(5i)", :description, :picture, :user_time_zone)
     end
 end

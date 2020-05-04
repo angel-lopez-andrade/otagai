@@ -82,3 +82,7 @@ gem "guard-livereload"
 gem "rack-livereload"
 
 gem "simple_calendar", "~> 2.0"
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jsTimezoneDetect'
+end

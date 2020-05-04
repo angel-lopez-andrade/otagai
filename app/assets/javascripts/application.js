@@ -17,4 +17,5 @@
 //= require jquery_ujs
 //= require jquery.slick
 //= require micromodal/dist/micromodal
+//= require jsTimezoneDetect
 //= require_tree .
