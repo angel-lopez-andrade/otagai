@@ -3,7 +3,7 @@
     <h2 class="sub-header">New Event</h2>
     <div class="form">
         <%= form_with scope: :post, url: create_event_path, local: true do |form| %>
-            <%= form.hidden_field(:user_time_zone, value: nil, id: "user_time_zone") %>
+            <%= form.hidden_field(:user_timezone, value: nil, id: "user_timezone") %>
         <div class="form-field">
             <%= form.label :event_name, "Event Name:" %>
             <%= form.text_field :event_name %>
@@ -28,7 +28,7 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            document.getElementById("user_time_zone").value = jstz.determine().name();
+            document.getElementById("user_timezone").value = jstz.determine().name();
         })
     </script>
 </section>

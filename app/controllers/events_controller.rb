@@ -11,7 +11,8 @@ class EventsController < ApplicationController
             user_id: current_user.id,
             date: @datetime,
             description: params[:post][:description],
-            name: params[:post][:event_name]
+            name: params[:post][:event_name],
+            timezone: params[:post][:user_timezone]
         )
         if params[:picture]
             event.picture.attach(params[:picture])
@@ -25,11 +26,10 @@ class EventsController < ApplicationController
 
     private
     def parse_datetime_params
-        user_timezone = ActiveSupport::TimeZone[params[:post][:user_time_zone]]
-        @datetime = Time.new(params[:post]["date_time(1i)"].to_i, params[:post]["date_time(2i)"].to_i, params[:post]["date_time(3i)"].to_i, params[:post]["date_time(4i)"].to_i, params[:post]["date_time(5i)"].to_i, 0, user_timezone)
+        @datetime = Time.new(params[:post]["date_time(1i)"].to_i, params[:post]["date_time(2i)"].to_i, params[:post]["date_time(3i)"].to_i, params[:post]["date_time(4i)"].to_i, params[:post]["date_time(5i)"].to_i, 0)
     end
 
     def whitelisted_params
-        @whitelisted_params = params.require(:post).permit(:event_name, "date_time(1i)", "date_time(2i)", "date_time(3i)", "date_time(4i)", "date_time(5i)", :description, :picture, :user_time_zone)
+        @whitelisted_params = params.require(:post).permit(:event_name, "date_time(1i)", "date_time(2i)", "date_time(3i)", "date_time(4i)", "date_time(5i)", :description, :picture, :user_timezone)
     end
 end
