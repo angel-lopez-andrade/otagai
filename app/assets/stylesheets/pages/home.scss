@@ -13,13 +13,13 @@
             outline: none;
             text-align: center;
             position: relative;
-            margin-left: 7px;
-            margin-right: 7px;
             height: 155px;
+            width: 150px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             span {
+                margin: 0 auto;
                 background: rgba(white, 0.5);
                 font-weight: bold;
                 min-width: fit-content;
@@ -27,6 +27,7 @@
                 /* inherit max-width from another child - img, possible? */
             }
             img {
+                margin: 0 auto;
                 height: 70px;
                 width: 90px;
             }
